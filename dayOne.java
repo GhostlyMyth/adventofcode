@@ -1,6 +1,9 @@
-
-public class dayOne{
 import java.util.*;
+import java.nio.file.Files;
+import java.nio.file.Paths;
+import java.util.stream.Collectors;
+public class dayOne{
+
 public static void parseFile(){
     /* 
     Path filePath = Paths.get("input.txt");
@@ -19,8 +22,9 @@ public static void parseFile(){
     }
 }
 */
-
-List<Integer> ints = Files.lines(Paths.get(input.txt))
+String input = "input.txt";
+Path filePath = Paths.get("input.txt");
+List<Integer> ints = Files.lines(Paths.get(input))
                           .map(Integer::parseInt)
                           .collect(Collectors.toList());
 System.out.println(ints.toString());
